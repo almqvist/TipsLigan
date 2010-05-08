@@ -12,6 +12,16 @@ namespace TipsLigan
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            WizCreateTabel.HeaderText = WizCreateTabel.ActiveStep.Name;
+            
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (tbTeam.Text != string.Empty)
+            {
+                lbTeams.Items.Add(tbTeam.Text);
+            }
         }
     }
 }
